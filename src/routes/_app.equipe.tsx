@@ -86,7 +86,7 @@ function EquipePage() {
             <Label>ID Chatwoot</Label>
             <Input type="number" value={form.chatwoot_user_id} onChange={(e) => setForm({ ...form, chatwoot_user_id: e.target.value })} />
           </div>
-          <Button type="submit" style={{ background: "var(--gradient-primary)" }}>
+          <Button type="submit">
             <Plus className="h-4 w-4 mr-2" /> Adicionar
           </Button>
         </form>
