@@ -84,7 +84,7 @@ function CampanhasPage() {
             <Input type="number" min={1} value={delay} onChange={(e) => setDelay(Number(e.target.value))} />
           </div>
           <div className="flex items-end">
-            <Button onClick={start} disabled={busy} className="w-full" style={{ background: "var(--gradient-neon)", color: "var(--success-foreground)", boxShadow: "var(--shadow-neon)" }}>
+            <Button onClick={start} disabled={busy} className="w-full">
               {busy ? <Zap className="h-4 w-4 mr-2 animate-pulse" /> : <Send className="h-4 w-4 mr-2" />}
               {busy ? "Disparando..." : "Iniciar Disparo"}
             </Button>

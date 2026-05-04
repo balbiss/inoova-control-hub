@@ -105,7 +105,7 @@ function ConfigPage() {
           <h1 className="text-3xl font-bold tracking-tight">Configurações IA</h1>
           <p className="text-muted-foreground mt-1">Personalize o comportamento do seu assistente</p>
         </div>
-        <Button onClick={save} disabled={saving} style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+        <Button onClick={save} disabled={saving}>
           <Save className="h-4 w-4 mr-2" /> {saving ? "Salvando..." : "Salvar"}
         </Button>
       </header>
