@@ -31,4 +31,4 @@ ENV PORT=3000
 EXPOSE 3000
 
 # Comando para iniciar o servidor do TanStack Start
-CMD ["node", "dist/server/index.js"]
+CMD ["npm", "run", "start"]
