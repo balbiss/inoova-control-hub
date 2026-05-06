@@ -65,7 +65,7 @@ function EquipePage() {
   };
 
   return (
-    <div className="p-8 space-y-6 max-w-5xl">
+    <div className="px-4 md:px-8 py-8 space-y-6 max-w-5xl">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">Equipe & Rodízio</h1>
         <p className="text-muted-foreground mt-1">Atendentes off-line não recebem leads no rodízio do n8n</p>

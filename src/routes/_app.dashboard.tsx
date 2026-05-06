@@ -9,7 +9,7 @@ export const Route = createFileRoute("/_app/dashboard")({
   component: DashboardPage,
 });
 
-type LogRow = { id: string; status: string; contato_nome: string | null; created_at: string | null };
+type LogRow = { id: string; status: string; contato_nome: string | null; telefone: string | null; created_at: string | null };
 
 function DashboardPage() {
   const { user } = useAuth();
@@ -20,7 +20,7 @@ function DashboardPage() {
     if (!user) return;
     supabase
       .from("leads_log")
-      .select("*")
+      .select("id, status, contato_nome, telefone, created_at")
       .order("created_at", { ascending: false })
       .limit(500)
       .then(({ data }) => {
@@ -58,7 +58,7 @@ function DashboardPage() {
   ];
 
   return (
-    <div className="px-8 py-8 space-y-8 max-w-[1400px] mx-auto">
+    <div className="px-4 md:px-8 py-8 space-y-8 max-w-[1400px] mx-auto">
       <header className="flex items-end justify-between">
         <div>
           <h1 className="text-[28px] font-semibold tracking-tight">Visão geral</h1>
@@ -163,8 +163,9 @@ function DashboardPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-xs font-medium truncate">{l.contato_nome ?? "Contato"}</div>
-                      <div className="text-[10px] text-muted-foreground">
-                        {l.created_at ? new Date(l.created_at).toLocaleString("pt-BR", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) : ""}
+                      <div className="text-[10px] text-muted-foreground flex flex-col">
+                        <span>{l.telefone || "Sem telefone"}</span>
+                        <span>{l.created_at ? new Date(l.created_at).toLocaleString("pt-BR", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) : ""}</span>
                       </div>
                     </div>
                     <StatusPill status={l.status} />

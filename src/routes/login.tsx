@@ -53,7 +53,7 @@ function LoginPage() {
           <div className="h-8 w-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur flex items-center justify-center">
             <div className="h-3 w-3 rounded-sm bg-primary" />
           </div>
-          <span className="text-sm font-semibold tracking-tight">InoovaWeb Control</span>
+          <span className="text-sm font-semibold tracking-tight">VisitaIA</span>
         </div>
 
         <div className="relative space-y-10">
@@ -85,7 +85,7 @@ function LoginPage() {
         </div>
 
         <div className="relative text-xs text-muted-foreground">
-          © {new Date().getFullYear()} InoovaWeb. Todos os direitos reservados.
+          © {new Date().getFullYear()} VisitaIA. Todos os direitos reservados.
         </div>
       </div>
 
@@ -96,7 +96,7 @@ function LoginPage() {
             <div className="h-8 w-8 rounded-lg border border-border bg-elevated flex items-center justify-center">
               <div className="h-3 w-3 rounded-sm bg-primary" />
             </div>
-            <span className="text-sm font-semibold">InoovaWeb Control</span>
+            <span className="text-sm font-semibold">VisitaIA</span>
           </div>
 
           <div className="mb-8">

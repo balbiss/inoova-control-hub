@@ -25,7 +25,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "InoovaWeb Control — Dashboard SaaS" },
+      { title: "VisitaIA — Dashboard SaaS" },
       { name: "description", content: "Painel multi-tenant para gestão de IA, atendentes e campanhas." },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
