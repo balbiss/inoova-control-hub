@@ -1,0 +1,13 @@
+node_modules
+dist
+.output
+.tanstack
+.env
+.git
+.github
+.vscode
+*.md
+Dockerfile
+.dockerignore
+package-lock.json
+bun.lockb
